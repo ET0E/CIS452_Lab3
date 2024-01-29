@@ -24,6 +24,7 @@ int main()
     else {
         /* insert an appropriate form of the wait() system call here */
         wait(&status);
+        child = getpid();
         printf("Child PID %ld terminated with return status %d\n", (long) child, WEXITSTATUS(status));
     }
     return 0;
