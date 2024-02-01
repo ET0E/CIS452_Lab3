@@ -6,7 +6,7 @@ int main()
 {
     puts("Before fork");
     fork();
-    sleep(180);
+    sleep(60);
     puts("After fork");
     return 0;
 }
