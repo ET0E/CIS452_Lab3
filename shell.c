@@ -39,7 +39,7 @@ int main(){
     while(1){
 
         printf("User Input: ");
-        scanf(" %[^\n]", user_input);
+        scanf("%[^\n]", user_input);
 
         if((strcmp(user_input, "quit") == 0)){
             break;
@@ -55,6 +55,7 @@ int main(){
         args[i] = NULL;
 
         run_commands(args);
+
         getrusage(getpid(), &usage);
         printf("%lu\n", usage.ru_utime);
         printf("%lu\n", usage.ru_nvcsw);
